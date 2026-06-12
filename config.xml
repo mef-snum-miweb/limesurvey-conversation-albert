@@ -14,5 +14,6 @@
     <compatibility>
         <version>5</version>
         <version>6</version>
+        <version>7</version>
     </compatibility>
 </config>
