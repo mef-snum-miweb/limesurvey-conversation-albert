@@ -18,7 +18,7 @@ Plugin LimeSurvey permettant de transformer une question "Texte long" en interfa
 
 ### Option 1 : Téléchargement direct
 
-1. Télécharger le [ZIP du plugin](https://github.com/bmatge/limesurvey-conversation-albert/archive/refs/heads/main.zip)
+1. Télécharger le [ZIP du plugin](https://github.com/mef-snum-miweb/limesurvey-conversation-albert/archive/refs/heads/main.zip)
 2. Extraire et renommer le dossier en `ConversationIA`
 3. Copier dans le dossier `/plugins/` de votre installation LimeSurvey
 
@@ -26,20 +26,20 @@ Plugin LimeSurvey permettant de transformer une question "Texte long" en interfa
 
 ```bash
 cd /chemin/vers/limesurvey/plugins/
-git clone https://github.com/bmatge/limesurvey-conversation-albert.git ConversationIA
+git clone https://github.com/mef-snum-miweb/limesurvey-conversation-albert.git ConversationIA
 ```
 
 ### Option 3 : Développement avec Docker
 
-Ce plugin fait partie de la suite [limesurvey-dsfr-suite](https://github.com/bmatge/limesurvey-dsfr-suite), qui fournit un environnement Docker complet pour le développement local et le déploiement en production.
+Ce plugin fait partie de la suite [limesurvey-dsfr-suite](https://github.com/mef-snum-miweb/limesurvey-dsfr-suite), qui fournit un environnement Docker complet pour le développement local et le déploiement en production.
 
 ```bash
 # Cloner les repos au même niveau
 cd ~/GitHub
-git clone https://github.com/bmatge/limesurvey-dsfr-suite.git
-git clone https://github.com/bmatge/limesurvey-theme-dsfr.git
-git clone https://github.com/bmatge/limesurvey-email-dsfr.git
-git clone https://github.com/bmatge/limesurvey-conversation-albert.git
+git clone https://github.com/mef-snum-miweb/limesurvey-dsfr-suite.git
+git clone https://github.com/mef-snum-miweb/limesurvey-theme-dsfr.git
+git clone https://github.com/mef-snum-miweb/limesurvey-email-dsfr.git
+git clone https://github.com/mef-snum-miweb/limesurvey-conversation-albert.git
 
 # Lancer l'environnement de développement
 cd limesurvey-dsfr-suite
