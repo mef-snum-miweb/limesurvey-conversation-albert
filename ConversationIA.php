@@ -235,8 +235,11 @@ class ConversationIA extends PluginBase
             return;
         }
 
-        // Publier et enregistrer les assets
-        $assetUrl = $this->publish('assets');
+        // Publier et enregistrer les assets — via AssetManager avec chemin absolu
+        // pour rester indépendant du répertoire d'installation (plugins/, upload/plugins/, core/plugins/).
+        // PluginBase::publish() résout en dur sur plugins/<Classe>/ (alias webroot.plugins.<Classe>)
+        // et échoue depuis upload/plugins/.
+        $assetUrl = App()->getAssetManager()->publish(__DIR__ . '/assets');
 
         // Enregistrer le CSS
         App()->clientScript->registerCssFile($assetUrl . '/css/conversation-ia.css');
