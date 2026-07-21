@@ -4,12 +4,12 @@
         <name>ConversationIA</name>
         <type>plugin</type>
         <creationDate>2025-01-06</creationDate>
-        <lastUpdate>2025-01-06</lastUpdate>
+        <lastUpdate>2026-07-21</lastUpdate>
         <author>LimeSurvey DSFR</author>
-        <authorUrl>https://github.com/betagouv/LimeSurvey-DSFR</authorUrl>
-        <version>0.1.0</version>
+        <authorUrl>https://github.com/mef-snum-miweb/limesurvey-conversation-albert</authorUrl>
+        <version>0.2.0</version>
         <license>GNU General Public License version 2 or later</license>
-        <description><![CDATA[Plugin permettant de transformer une question Texte long en conversation IA avec un LLM (Albert API).]]></description>
+        <description><![CDATA[Extension tierce transformant une question Texte long en interface de conversation IA (Albert API ou compatible OpenAI). Installable par ZIP via l'UI d'administration LimeSurvey.]]></description>
     </metadata>
     <compatibility>
         <version>5</version>

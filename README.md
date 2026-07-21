@@ -16,20 +16,28 @@ Plugin LimeSurvey permettant de transformer une question "Texte long" en interfa
 
 ## Installation
 
-### Option 1 : Téléchargement direct
+### Méthode 1 (recommandée) — ZIP via l'UI d'administration
 
-1. Télécharger le [ZIP du plugin](https://github.com/mef-snum-miweb/limesurvey-conversation-albert/archive/refs/heads/main.zip)
-2. Extraire et renommer le dossier en `ConversationIA`
-3. Copier dans le dossier `/plugins/` de votre installation LimeSurvey
+Sans accès système au serveur, avec les seuls droits admin LimeSurvey :
 
-### Option 2 : Git clone
+1. Récupérer `ConversationIA.zip` depuis la [dernière release GitHub](https://github.com/mef-snum-miweb/limesurvey-conversation-albert/releases/latest).
+2. Dans l'admin : **Configuration → Plugins → Upload & install**, sélectionner le ZIP → **Installer**.
+3. Retour à la liste des plugins → **Activer** `ConversationIA`.
 
-```bash
-cd /chemin/vers/limesurvey/plugins/
-git clone https://github.com/mef-snum-miweb/limesurvey-conversation-albert.git ConversationIA
-```
+Le plugin est déposé dans `upload/plugins/ConversationIA/`, **préservé lors des mises à jour du core LimeSurvey**.
 
-### Option 3 : Développement avec Docker
+### Mises à jour via l'UI
+
+Récupérer le nouveau `ConversationIA.zip` d'une release ultérieure et re-passer par **Upload & install** : LimeSurvey détecte la version installée et propose la mise à jour (overwrite du dossier `upload/plugins/ConversationIA/`, réglages en base préservés).
+
+### Méthode 2 (accès fichier) — dépôt filesystem
+
+- **Persisté aux MàJ du core** : décompresser dans `upload/plugins/ConversationIA/` (équivalent à la méthode 1 côté résultat).
+- **Développement / Docker mount** : décompresser dans `plugins/ConversationIA/` (écrasé aux MàJ du core, à réserver au dev).
+
+S'assurer que les fichiers appartiennent à l'utilisateur du serveur web (ex. `chown -R www-data:www-data upload/plugins/ConversationIA`).
+
+### Méthode 3 — Développement avec Docker
 
 Ce plugin fait partie de la suite [limesurvey-dsfr-suite](https://github.com/mef-snum-miweb/limesurvey-dsfr-suite), qui fournit un environnement Docker complet pour le développement local et le déploiement en production.
 
@@ -49,7 +57,7 @@ docker compose -f docker-compose.dev.yml up -d
 
 Les fichiers du plugin sont montés en direct : toute modification est visible après un rafraîchissement du navigateur.
 
-### Activation
+### Activation et configuration
 
 1. Aller dans **Configuration > Plugins** dans l'admin LimeSurvey
 2. Activer le plugin "ConversationIA"
